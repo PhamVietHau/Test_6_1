@@ -130,7 +130,7 @@ end//
 
 
 insert into `Role` (`role`) values ('ADMIN'),('USER');
-insert into `User` (roleId,userName,`password`,email) values (1,'Admin','Admin','Admin@shops.com'),(2,'User1','User1','User1@gmail.com');
+insert into `User` (roleId,userName,`password`,email) values (1,'Admin','{noop}Admin','Admin@shops.com'),(2,'User1','{noop}User1','User1@gmail.com');
 insert into Color (`name`) values ('Red'),('Blue'),('Green'),('Black');
 insert into Size (`name`) values ('XS'),('S'),('M'),('L'),('XL'),('XXL');
 insert into Coupon values (1,'Tết Nguyên Đán 2023','Mừng Tết Nguyên Đán 2023, Giảm giá sặp sàn','2023',100,100000,current_timestamp(),999);
@@ -147,10 +147,12 @@ insert into PaymentMethod values (1,'Tiền mặt'),(2,'Bankking');
 insert into ShippingInfo values (1,2,'Ngo huynh hieu','0909090909','88 quang trung','Da nang','Da nang','VN',''),(2,2,'Ngo huynh hieu','0808080808','246 nguyen hue','Da nang','Da nang','VN','');
 insert into orders values (1,2,1,1,570000,1,1,1,current_timestamp()),(2,2,2,null,360000,2,2,2,current_timestamp());
 insert into OrderDetail values (1,1,1,5,400000),(2,1,2,3,270000),(3,2,2,4,360000);
+UPDATE `shopv3`.`product` SET `image` = 'https://i.imgur.com/x63UaHb.png' WHERE (`id` = '1');
+UPDATE `shopv3`.`product` SET `image` = 'https://i.imgur.com/47fhVXR.png' WHERE (`id` = '2');
 
-
-
-
+INSERT INTO `shopv3`.`product` (`id`, `productTypeId`, `name`, `priceId`, `description`, `image`) VALUES ('3', '1', 'Áo', '1', 'Áo', 'https://i.imgur.com/CKGwteU.png');
+INSERT INTO `shopv3`.`product` (`id`, `productTypeId`, `name`, `priceId`, `description`, `image`) VALUES ('4', '1', 'Áo', '1', 'Áo', 'https://i.imgur.com/Q438wWd.png');
+INSERT INTO `shopv3`.`product` (`id`, `productTypeId`, `name`, `priceId`, `description`, `image`) VALUES ('5', '1', 'Áo', '1', 'Áo', 'https://i.imgur.com/6yafYNv.png');
 
 
 

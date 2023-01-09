@@ -1,3 +1,16 @@
+<%--
+  Created by IntelliJ IDEA.
+  User: ADMIN
+  Date: 12/28/22
+  Time: 3:33 PM
+  To change this template use File | Settings | File Templates.
+--%>
+<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<html>
+<head>
+    <title>Home</title>
+</head>
+<body>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%--
   Created by IntelliJ IDEA.
@@ -89,8 +102,8 @@
                     <a class="nav-link" href="#">
                         <i class="fa-solid fa-cart-shopping"></i> Giỏ Hàng
                     </a>
-
                 </li>
+
                 <li  class="nav-item nav-item dropdown " style="margin-left: 10vh" >
                     <a class="nav-link dropdown-toggle" href="#"  role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                         <i class="fa-regular fa-user"></i> Tài Khoản</a>
@@ -98,7 +111,6 @@
                         <a class="dropdown-item" href="login">Đăng Nhập</a>
                         <a class="dropdown-item" href="regist">Đăng kí</a>
                     </div>
-
                 </li>
             </ul>
         </div>
@@ -164,42 +176,32 @@
     <h2>Shop</h2>
 </div>
 <div class="card-deck" style="padding: 0 10%;">
-    <div class="card">
-        <img class="card-img-top" src="https://i.imgur.com/x63UaHb.png" alt="Card image cap">
-        <div class="card-body">
-            <h5 class="card-title">Card title</h5>
-            <a href="#" class="btn btn-primary">Add to cart</a>
+    <%--            <div class="card">--%>
+    <%--                <img class="card-img-top" src="${i.image}" style="max-height: 300px" alt="Card image cap">--%>
+    <%--                <div class="card-body">--%>
+    <%--                    <h5 class="card-title">${i.name}</h5>--%>
+    <%--                    <h5 class="card-title">₫${i.price.price}</h5>--%>
+    <%--                    <a href="#" class="btn btn-primary">Add to cart</a>--%>
+    <%--                </div>--%>
+    <%--            </div>--%>
+    <c:forEach var="i" items="${products}" begin="1" end="8">
+        <div class="col-md-3 md-col" style="margin: 10px 0">
+            <div class="col-md">
+                <img src="${i.image}" alt="" />
+                <div class="top-content">
+                    <h5>${i.name}</h5>
+                    <p class="dollar"><span class="in-dollar">₫</span><span>${i.price.price}</span></p>
+                    <div class="white">
+                        <a href="#" class="btn btn-primary" >ADD TO CART</a>
+                        <div class="clearfix"></div>
+                    </div>
+                </div>
+            </div>
         </div>
-    </div>
-    <div class="card">
-        <img class="card-img-top" src="https://i.imgur.com/CKGwteU.png" alt="Card image cap">
-        <div class="card-body">
-            <h5 class="card-title">Card title</h5>
-            <a href="#" class="btn btn-primary">Add to cart</a>
-        </div>
-    </div>
-    <div class="card">
-        <img class="card-img-top" src="https://i.imgur.com/XjRowma.png" alt="Card image cap">
-        <div class="card-body">
-            <h5 class="card-title">Card title</h5>
-            <a href="#" class="btn btn-primary">Add to cart</a>
-        </div>
-    </div>
-    <div class="card">
-        <img class="card-img-top" src="https://i.imgur.com/AUtW9Bg.png" alt="Card image cap">
-        <div class="card-body">
-            <h5 class="card-title">Card title</h5>
-            <a href="#" class="btn btn-primary">Add to cart</a>
-        </div>
-    </div>
-    <div class="card">
-        <img class="card-img-top" src="https://i.imgur.com/HlYX742.png" alt="Card image cap">
-        <div class="card-body">
-            <h5 class="card-title">Card title</h5>
-            <a href="#" class="btn btn-primary">Add to cart</a>
-        </div>
-    </div>
+    </c:forEach>
+    <%--            <div class="clearfix"></div>--%>
 </div>
+
 <div>
     <div style="margin: 15px 0">
         <img src="https://i.imgur.com/knBs66n.png" alt="">
@@ -382,5 +384,8 @@
     </footer>
 </div>
 <%--==================footer=============--%>
+</body>
+</html>
+
 </body>
 </html>
