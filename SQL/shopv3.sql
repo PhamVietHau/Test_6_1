@@ -15,7 +15,7 @@ create table user(
 
 create table role(
 	id int primary key auto_increment,
-    `role` text
+    `role` varchar(510)
 );
 
 create table ShippingInfo(
@@ -27,7 +27,7 @@ create table ShippingInfo(
     city varchar(510),
     county varchar(510),
     country varchar(510),
-    other text
+    other varchar(510)
 );
 
 
@@ -40,7 +40,7 @@ create table ShippingType(
 create table Coupon(
 	id int primary key auto_increment,
     `name` varchar(510),
-    `description` text,
+    `description` varchar(510),
     `code` varchar(20),
     discount int,
     maxDiscountAmount int,
@@ -85,8 +85,8 @@ create table Product(
     productTypeId int,
     `name` varchar(510),
     priceId int,
-    `description` text,
-    image text
+    `description` varchar(510),
+    image varchar(510)
 );
 
 create table ProductType(
@@ -99,7 +99,7 @@ create table Amount(
     color_id int,
     size_id int,
     amount int,
-    image text
+    image varchar(510)
 );
 
 create table Color(
@@ -154,8 +154,12 @@ INSERT INTO `shopv3`.`product` (`id`, `productTypeId`, `name`, `priceId`, `descr
 INSERT INTO `shopv3`.`product` (`id`, `productTypeId`, `name`, `priceId`, `description`, `image`) VALUES ('4', '1', 'Áo', '1', 'Áo', 'https://i.imgur.com/Q438wWd.png');
 INSERT INTO `shopv3`.`product` (`id`, `productTypeId`, `name`, `priceId`, `description`, `image`) VALUES ('5', '1', 'Áo', '1', 'Áo', 'https://i.imgur.com/6yafYNv.png');
 
-
-
+insert into Product values (6,3,'Quần Tây ',3,'Quần Tây','https://i.imgur.com/YrMRwk0.png'),
+	(7,3,'Quần sọc kẻ',4,'Quần sọc kẻ','https://i.imgur.com/XjRowma.png'),
+	(8,3,'Quần ống đứng',3,'Quần ống đứng','https://i.imgur.com/HlYX742.png'),
+    (9,3,'Quần ống vải len',3,'Quần ống vải len','https://i.imgur.com/AUtW9Bg.png');
+insert into Price values (3,120000,current_timestamp(),date_add(current_timestamp(),interval 365 day)),
+	(4,200000,current_timestamp(),date_add(current_timestamp(),interval 365 day));
 
 
 

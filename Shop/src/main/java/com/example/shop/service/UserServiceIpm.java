@@ -25,20 +25,4 @@ public class UserServiceIpm implements UserService{
         userRepository.save(user);
     }
 
-    @Override
-    public User createUser(User user) {
-        return userRepository.save(user);
-    }
-
-    @Override
-    public User findByUsername(String Username) {
-        return userRepository.findByUserName(Username);
-    }
-
-
-    @Override
-    public List<User> getUsers() {
-        return null;
-    }
-
 }
