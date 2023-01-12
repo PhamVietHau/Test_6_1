@@ -16,6 +16,11 @@
     <style>
         a{
             text-decoration: none;
+
+        }
+
+        .card-deck a:hover{
+            text-decoration: none;
         }
 
         img{
@@ -86,7 +91,7 @@
                     </form >
                 </li>
                 <li style="margin-left: 10vh" class="nav-item ">
-                    <a class="nav-link" href="#">
+                    <a class="nav-link" href="cart/">
                         <i class="fa-solid fa-cart-shopping"></i> Giỏ Hàng
                     </a>
 
@@ -167,17 +172,21 @@
 <div class="card-deck" style="padding: 0 10%;">
     <c:forEach var="i" items="${shop}" begin="0" end="7">
         <div class="col-md-3 md-col" style="margin: 10px 0">
-            <div class="col-md">
-                <img src="${i.image}" alt="" />
+            <a href="" style="color: black;">
+            <div class="col-md" >
+                <div class="view overlay zoom">
+                    <img src="${i.image}" class="img-fluid " alt="smaple image">
+                </div>
                 <div class="top-content">
                     <h5>${i.name}</h5>
                     <p class="dollar"><span class="in-dollar">₫</span><span>${i.price.price}</span></p>
                     <div class="white">
-                        <a href="#" class="btn btn-primary" >ADD TO CART</a>
+                        <a href="#" class="btn btn-primary" ><i class="fa fa-cart-plus" aria-hidden="true"></i> Thêm vào giỏ</a>
                         <div class="clearfix"></div>
                     </div>
                 </div>
             </div>
+            </a>
         </div>
     </c:forEach>
 </div>
@@ -197,7 +206,7 @@
                         <h5>${i.name}</h5>
                         <p class="dollar"><span class="in-dollar">₫</span><span>${i.price.price}</span></p>
                         <div class="white">
-                            <a href="#" class="btn btn-primary" >ADD TO CART</a>
+                            <a href="#" class="btn btn-primary" ><i class="fa fa-cart-plus" aria-hidden="true"></i> Thêm vào giỏ</a>
                             <div class="clearfix"></div>
                         </div>
                     </div>
@@ -222,7 +231,7 @@
                         <h5>${i.name}</h5>
                         <p class="dollar"><span class="in-dollar">₫</span><span>${i.price.price}</span></p>
                         <div class="white">
-                            <a href="#" class="btn btn-primary" >ADD TO CART</a>
+                            <a href="#" class="btn btn-primary" ><i class="fa fa-cart-plus" aria-hidden="true"></i> Thêm vào giỏ</a>
                             <div class="clearfix"></div>
                         </div>
                     </div>

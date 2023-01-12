@@ -18,7 +18,6 @@ public class HomeController {
     @Autowired
     private ProductService productService;
 
-
     @RequestMapping(value = "/")
     public String home(Model model) {
         model.addAttribute("products",productService.all() );
