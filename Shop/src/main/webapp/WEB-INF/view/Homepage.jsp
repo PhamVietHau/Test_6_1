@@ -165,7 +165,7 @@
 </div>
 
 <div class="card-deck" style="padding: 0 10%;">
-    <c:forEach var="i" items="${products}" begin="1" end="4">
+    <c:forEach var="i" items="${shop}" begin="0" end="7">
         <div class="col-md-3 md-col" style="margin: 10px 0">
             <div class="col-md">
                 <img src="${i.image}" alt="" />
@@ -189,41 +189,21 @@
         <h2>Áo</h2>
     </div>
     <div class="card-deck" style="padding: 0 10%;">
-        <div class="card">
-            <img class="card-img-top" src="https://i.imgur.com/x63UaHb.png" alt="Card image cap">
-            <div class="card-body">
-                <h5 class="card-title">Card title</h5>
-                <a href="#" class="btn btn-primary">Add to cart</a>
+        <c:forEach var="i" items="${productShirt}" begin="0" end="7">
+            <div class="col-md-3 md-col" style="margin: 10px 0">
+                <div class="col-md">
+                    <img src="${i.image}" alt="" />
+                    <div class="top-content">
+                        <h5>${i.name}</h5>
+                        <p class="dollar"><span class="in-dollar">₫</span><span>${i.price.price}</span></p>
+                        <div class="white">
+                            <a href="#" class="btn btn-primary" >ADD TO CART</a>
+                            <div class="clearfix"></div>
+                        </div>
+                    </div>
+                </div>
             </div>
-        </div>
-        <div class="card">
-            <img class="card-img-top" src="https://i.imgur.com/47fhVXR.png" alt="Card image cap">
-            <div class="card-body">
-                <h5 class="card-title">Card title</h5>
-                <a href="#" class="btn btn-primary">Add to cart</a>
-            </div>
-        </div>
-        <div class="card">
-            <img class="card-img-top" src="https://i.imgur.com/CKGwteU.png" alt="Card image cap">
-            <div class="card-body">
-                <h5 class="card-title">Card title</h5>
-                <a href="#" class="btn btn-primary">Add to cart</a>
-            </div>
-        </div>
-        <div class="card">
-            <img class="card-img-top" src="https://i.imgur.com/6yafYNv.png" alt="Card image cap">
-            <div class="card-body">
-                <h5 class="card-title">Card title</h5>
-                <a href="#" class="btn btn-primary">Add to cart</a>
-            </div>
-        </div>
-        <div class="card">
-            <img class="card-img-top" src="https://i.imgur.com/Q438wWd.png" alt="Card image cap">
-            <div class="card-body">
-                <h5 class="card-title">Card title</h5>
-                <a href="#" class="btn btn-primary">Add to cart</a>
-            </div>
-        </div>
+        </c:forEach>
     </div>
 </div>
 <div>
@@ -234,41 +214,21 @@
         <h2>Quần</h2>
     </div>
     <div class="card-deck" style="padding: 0 10%;">
-        <div class="card">
-            <img class="card-img-top" src="https://i.imgur.com/XjRowma.png" alt="Card image cap">
-            <div class="card-body">
-                <h5 class="card-title">Card title</h5>
-                <a href="#" class="btn btn-primary">Add to cart</a>
+        <c:forEach var="i" items="${productPants}" begin="0" end="7">
+            <div class="col-md-3 md-col" style="margin: 10px 0">
+                <div class="col-md">
+                    <img src="${i.image}" alt="" />
+                    <div class="top-content">
+                        <h5>${i.name}</h5>
+                        <p class="dollar"><span class="in-dollar">₫</span><span>${i.price.price}</span></p>
+                        <div class="white">
+                            <a href="#" class="btn btn-primary" >ADD TO CART</a>
+                            <div class="clearfix"></div>
+                        </div>
+                    </div>
+                </div>
             </div>
-        </div>
-        <div class="card">
-            <img class="card-img-top" src="https://i.imgur.com/PLpfFEu.png" alt="Card image cap">
-            <div class="card-body">
-                <h5 class="card-title">Card title</h5>
-                <a href="#" class="btn btn-primary">Add to cart</a>
-            </div>
-        </div>
-        <div class="card">
-            <img class="card-img-top" src="https://i.imgur.com/YrMRwk0.png" alt="Card image cap">
-            <div class="card-body">
-                <h5 class="card-title">Card title</h5>
-                <a href="#" class="btn btn-primary">Add to cart</a>
-            </div>
-        </div>
-        <div class="card">
-            <img class="card-img-top" src="https://i.imgur.com/HlYX742.png" alt="Card image cap">
-            <div class="card-body">
-                <h5 class="card-title">Card title</h5>
-                <a href="#" class="btn btn-primary">Add to cart</a>
-            </div>
-        </div>
-        <div class="card">
-            <img class="card-img-top" src="https://i.imgur.com/AUtW9Bg.png" alt="Card image cap">
-            <div class="card-body">
-                <h5 class="card-title">Card title</h5>
-                <a href="#" class="btn btn-primary">Add to cart</a>
-            </div>
-        </div>
+        </c:forEach>
     </div>
 </div>
 

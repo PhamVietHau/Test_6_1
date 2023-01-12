@@ -24,4 +24,19 @@ public class ProductServiceIpm implements ProductService{
     public void save(Product product) {
         productRepository.save(product);
     }
+
+    @Override
+    public List<Product> findPants() {
+        return productRepository.findPants();
+    }
+
+    @Override
+    public List<Product> findShirtsAndCoats() {
+        return productRepository.findShirtsAndCoats();
+    }
+
+    @Override
+    public List<Product> allDescId() {
+        return productRepository.allDescId();
+    }
 }

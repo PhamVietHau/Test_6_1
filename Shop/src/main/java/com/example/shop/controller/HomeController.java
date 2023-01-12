@@ -21,8 +21,10 @@ public class HomeController {
 
     @RequestMapping(value = "/")
     public String home(Model model) {
-
         model.addAttribute("products",productService.all() );
+        model.addAttribute("productShirt",productService.findShirtsAndCoats());
+        model.addAttribute("productPants",productService.findPants());
+        model.addAttribute("shop",productService.allDescId());
         return "Homepage";
 
     }
